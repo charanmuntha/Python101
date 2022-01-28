@@ -1,0 +1,36 @@
+'''
+This program finds the min, max, total, and average of a list of numbers.
+This also calculates whether this list has duplicates or not.
+Charan 1/28/22
+'''
+numbers =[10,20,30,125,40,10,50,60,70,80,90]
+print("The list of numbers are")
+for x in numbers:
+    print(x, end = ' ')
+
+max = numbers[0]
+
+for x in numbers:
+    if x > max:
+        max = x
+        
+print("\nmax of input list is", max)
+
+min = numbers[0]
+
+for x in numbers:
+    if x < min:
+        min = x
+        
+print("\nmin of inout list is", min)
+
+total = 0
+for x in numbers:
+    total = total + x
+
+numbers_len = len(numbers)
+print("The total is", total)
+print("The average is", total / numbers_len)
+
+contains_duplicates = any(numbers.count(element) > 1 for element in numbers)
+print("True or False, are there duplicates?", contains_duplicates)
